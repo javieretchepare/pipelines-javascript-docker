@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: javieretcheparepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: javieretcheparepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: javieretcheparepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: javieretcheparepipelinesjavascriptdocker 
+          image: azakshandsonacr.azurecr.io/javieretcheparepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
